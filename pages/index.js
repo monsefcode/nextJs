@@ -70,6 +70,23 @@ export default function Home() {
       </motion.div>
       
 
+      {[1,2,3,4].map((item, index) => (
+        <motion.div 
+          key={index}
+          className="grid grid-cols-3 gap-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+        >
+          <div className="p-6 rounded-lg max-w-sm dark:bg-slate-900 shadow-lg ">
+            <h1 className="text-xl font-bold">Notifications</h1>
+            <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions,</p>
+          </div>
+        </motion.div>
+      ))}
+
+      
+
     </div>
   );
 }

@@ -9,8 +9,8 @@ const customLink = ({ href, label }) => {
     <Link href={href}>
       <div className="group h-[40px] p-2 overflow-hidden">
         <div className="flex flex-col item-center justify-center group-hover:-translate-y-10 transition duration-700">
+          <span className="hover:text-yellow-800 mb-4">{label}</span>
           <span className="">{label}</span>
-          <span className=" font-semibold">{label}</span>
         </div>
       </div>
     </Link>
