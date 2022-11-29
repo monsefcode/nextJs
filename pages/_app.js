@@ -1,13 +1,13 @@
 import React from "react";
 import '../styles/globals.css';
-import Nav from '../components/nav.js';
+// next-themes
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <section className="mx-56 mt-12">
-      <Nav />
+    <ThemeProvider defaultTheme="system" attribute="class">
       <Component {...pageProps} />
-    </section>
+    </ThemeProvider>
   )
 }
 
